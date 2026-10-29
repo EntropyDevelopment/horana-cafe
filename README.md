@@ -3,6 +3,7 @@
 Landing page editorial para **HorAna**, una casa de café de especialidad y pastelería artesanal en **Cervantes 610, Floresta**. El sitio está construido con HTML, CSS y JavaScript vanilla: sin frameworks, sin build step y listo para publicar en cualquier hosting estático.
 
 - **Repositorio:** [EntropyDevelopment/horana-cafe](https://github.com/EntropyDevelopment/horana-cafe)
+- **Sitio en vivo:** [entropydevelopment.github.io/horana-cafe](https://entropydevelopment.github.io/horana-cafe/)
 - **Diseño y desarrollo:** [Entropy](https://www.entropydevs.com)
 
 ---
@@ -226,13 +227,17 @@ Detalles de craft:
 
 ## 9. Publicación
 
-Al ser un sitio estático, se puede publicar en GitHub Pages, Netlify, Vercel o cualquier servidor web.
+El sitio está publicado con **GitHub Pages**:
 
-### GitHub Pages
+**[https://entropydevelopment.github.io/horana-cafe/](https://entropydevelopment.github.io/horana-cafe/)**
+
+La publicación está configurada desde la rama `main` / carpeta raíz (`/`). Cada push a `main` reconstruye el sitio automáticamente. El archivo `.nojekyll` evita el procesamiento de Jekyll.
+
+### Reproducir la configuración
 
 1. Subir el proyecto a la rama `main`.
-2. En **Settings → Pages**, elegir “Deploy from a branch” y la rama `main` / carpeta `/ (root)`.
-3. El archivo `.nojekyll` evita el procesamiento innecesario de Jekyll.
+2. En **Settings → Pages**, elegir “Deploy from a branch”, rama `main` y carpeta `/ (root)`.
+3. Verificar que `.nojekyll` esté presente.
 
 ### Antes de publicar
 
@@ -241,7 +246,7 @@ Al ser un sitio estático, se puede publicar en GitHub Pages, Netlify, Vercel o 
 - [ ] Crear y enlazar `instagramUrl`.
 - [ ] Completar `whatsappNumber`, `phoneNumber` y `email` cuando estén disponibles.
 - [ ] Actualizar las URLs absolutas de Open Graph/Twitter si se define el dominio final.
-- [ ] Revisar que la dirección del mapa sea la ubicación exacta del local.
+- [x] Mapa fijado en Cervantes 610, Floresta.
 
 ---
 
