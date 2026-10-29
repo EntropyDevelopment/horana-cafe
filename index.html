@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FBFBF5">
+  <meta name="color-scheme" content="light">
+
+  <title>HorAna — Café de Especialidad · Cervantes 610</title>
+  <meta name="description" content="Café de especialidad, pastelería artesanal y la calidez de una casa de familia en Cervantes 610. Conocé el menú, nuestra historia y cómo llegar a HorAna.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="HorAna">
+  <meta property="og:title" content="HorAna — Café de Especialidad">
+  <meta property="og:description" content="El ritual del café de especialidad, horneados artesanales y la calidez de una casa de familia en Cervantes 610.">
+  <meta property="og:image" content="assets/og-horana.jpg">
+  <meta property="og:image:alt" content="Emblema de HorAna, café de especialidad">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="HorAna — Café de Especialidad">
+  <meta name="twitter:description" content="Café de especialidad, pastelería artesanal y la calidez de una casa de familia en Cervantes 610.">
+  <meta name="twitter:image" content="assets/og-horana.jpg">
+
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <noscript>
+    <style>
+      [data-reveal], [data-reveal-up] { opacity: 1 !important; transform: none !important; }
+      .ornament__line { transform: scaleX(1) !important; }
+      .ornament__dot, .ornament__diamond { opacity: 1 !important; }
+      .ornament__diamond { transform: rotate(45deg) scale(1) !important; }
+      .menu__filters-wrap { position: static; }
+    </style>
+  </noscript>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "HorAna — Café de Especialidad",
+    "description": "Café de especialidad, pastelería artesanal y la calidez de una casa de familia.",
+    "image": "assets/og-horana.jpg",
+    "logo": "assets/horana_logo_transparent.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cervantes 610"
+    },
+    "servesCuisine": ["Café de especialidad", "Pastelería artesanal"],
+    "hasMenu": "assets/menu_horana.pdf"
+  }
+  </script>
+
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- Sprite de íconos: trazo fino, dibujado a mano para la identidad HorAna. -->
+  <svg class="svg-sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 19 19 5M8 5h11v11" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24">
+      <path d="m6 9 6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 20h16" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-image" viewBox="0 0 24 24">
+      <rect x="3.5" y="4.5" width="17" height="15" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="9" cy="10" r="1.6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="m4.5 17 5-5 3.2 3.2 2.6-2.6 4.2 4.4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-map" viewBox="0 0 24 24">
+      <path d="M12 21s7-5.6 7-12a7 7 0 1 0-14 0c0 6.4 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <circle cx="12" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="17.4" cy="6.7" r="1" fill="currentColor"/>
+    </symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24">
+      <path d="M20.2 11.7a8.2 8.2 0 0 1-12.1 7.2L3.8 20l1.1-4.3A8.2 8.2 0 1 1 20.2 11.7Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M8.7 8.4c.2-.5.5-.5.8-.5h.5c.2 0 .4.1.6.5l.7 1.7c.1.3 0 .5-.2.7l-.6.7c-.2.2-.2.4-.1.6.4.8 1.3 1.8 2.3 2.3.3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.7-.1l1.7.8c.4.2.4.4.4.7 0 .9-.7 1.7-1.6 1.9-.7.1-1.6 0-2.9-.6-1.8-.8-3.7-2.7-4.5-4.5-.5-1.1-.6-2.1-.3-2.8Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24">
+      <path d="M7.2 3.7h-.9A2.3 2.3 0 0 0 4 6.1c.2 7.2 6.7 13.7 13.9 13.9a2.3 2.3 0 0 0 2.4-2.3v-1.1c0-.6-.4-1.1-1-1.2l-3-.6c-.5-.1-1 .1-1.3.5l-.8 1c-2.2-.9-5.1-3.8-6-6l1-.8c.4-.3.6-.8.5-1.3l-.6-3c-.1-.6-.6-1-1.2-1Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5.5" width="18" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path d="m12 3.6 2.5 5.2 5.7.8-4.1 4 1 5.7-5.1-2.7-5.1 2.7 1-5.7-4.1-4 5.7-.8L12 3.6Z" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24">
+      <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-sprig" viewBox="0 0 120 260">
+      <path d="M61 250C48 202 39 152 44 98c3-31 16-59 36-82" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M47 168c-24-4-33-24-29-44 18 5 31 22 29 44Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M53 128c-19-11-22-32-12-49 15 11 22 31 12 49Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M64 89c18-6 27-24 22-43-17 5-27 23-22 43Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M48 205c-16 3-29-7-33-21 15-4 29 6 33 21Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="79" cy="55" r="5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="91" cy="44" r="3.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="68" cy="47" r="3.5" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    </symbol>
+
+    <symbol id="g-latte" viewBox="0 0 200 240">
+      <ellipse cx="100" cy="184" rx="64" ry="12" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M58 120h84l-8 48c-2 11-14 17-34 17s-32-6-34-17l-8-48Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M142 128c27-4 29 30 2 31" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+      <ellipse cx="100" cy="121" rx="42" ry="9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M100 137c-9-11-22-4-14 6 4 5 14 10 14 10s10-5 14-10c8-10-5-17-14-6Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M86 101c-8-13 7-20 1-33M110 99c-7-13 8-20 2-32" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".7"/>
+    </symbol>
+    <symbol id="g-croissant" viewBox="0 0 200 240">
+      <path d="M61 166c-14-8-25-21-24-35 1-17 18-26 32-17 6-27 57-27 62 1 14-10 31-1 32 16 1 14-10 27-24 35-20 11-58 11-78 0Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M70 118c4 15 7 31 4 46M100 104v64M130 118c-4 15-7 31-4 46" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M38 131c11 1 20 5 28 12M162 131c-11 1-20 5-28 12" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="54" cy="93" r="1.3" fill="currentColor"/><circle cx="151" cy="88" r="1.3" fill="currentColor"/>
+    </symbol>
+    <symbol id="g-cookies" viewBox="0 0 200 240">
+      <circle cx="78" cy="112" r="38" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <circle cx="124" cy="148" r="42" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M49 135c14-23 45-22 59-2M97 174c11-22 40-27 58-9" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".65"/>
+      <g fill="currentColor">
+        <circle cx="68" cy="100" r="2.6"/><circle cx="90" cy="97" r="2"/><circle cx="84" cy="126" r="2.3"/>
+        <circle cx="59" cy="123" r="1.8"/><circle cx="111" cy="136" r="2.6"/><circle cx="136" cy="127" r="2"/>
+        <circle cx="143" cy="158" r="2.4"/><circle cx="116" cy="171" r="1.8"/><circle cx="128" cy="147" r="1.6"/>
+      </g>
+    </symbol>
+    <symbol id="g-cake" viewBox="0 0 200 240">
+      <path d="m49 131 56-38 49 38-50 39-55-39Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M104 170v34m-55-73v34l55 39 50-39v-34" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="m49 148 55 39 50-39M63 140l56 39M138 140l-50 39" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".75"/>
+      <path d="M104 75c-11-16 10-24 3-39" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="113" cy="88" r="6" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    </symbol>
+    <symbol id="g-bagel" viewBox="0 0 200 240">
+      <ellipse cx="100" cy="132" rx="58" ry="47" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <ellipse cx="100" cy="132" rx="25" ry="18" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M47 125c24-9 82-12 106 3M50 149c27 12 73 14 100 0" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".65"/>
+      <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
+        <path d="m72 97 3-4M94 88l1-5M119 92l4-3M137 108l4-1M63 113l-5-2M128 164l2 4M82 171l-2 4"/>
+      </g>
+    </symbol>
+    <symbol id="g-pourover" viewBox="0 0 200 240">
+      <path d="M66 80h68l-17 55H83L66 80Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M73 91h54M78 105h44M84 120h32" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".7"/>
+      <path d="M76 143h48l9 49c-19 8-47 8-66 0l9-49Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M124 156c21-4 24 22 3 24M77 174c15 4 31 4 46 0" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M91 62c-5-9 6-14 2-23M108 60c-4-8 6-13 3-21" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity=".65"/>
+    </symbol>
+    <symbol id="g-bar" viewBox="0 0 200 240">
+      <path d="M36 55h128M44 55v54M156 55v54" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <rect x="57" y="82" width="86" height="55" rx="3" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M57 98h86M72 82V70h22v12M118 137v14M108 151h20" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="79" cy="116" r="4" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <circle cx="120" cy="116" r="4" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M129 143c8 0 12 6 10 14h-17c-1-8 2-14 7-14Z" fill="none" stroke="currentColor" stroke-width="1.3"/>
+      <path d="M75 126c-4-7 4-11 1-18M84 126c-3-7 4-11 1-18" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity=".65"/>
+      <path d="M28 185h144M38 185v28M162 185v28" fill="none" stroke="currentColor" stroke-width="1.3"/>
+    </symbol>
+    <symbol id="g-table" viewBox="0 0 200 240">
+      <ellipse cx="100" cy="142" rx="59" ry="14" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M48 144v58M152 144v58M41 202h20M139 202h20" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/>
+      <path d="M36 114v42M22 117v18h28v-18M164 114v42M150 117v18h28v-18" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+      <path d="M80 132h20l-2 10H82l-2-10ZM80 127c6-4 14-4 20 0" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M113 135c-4-8 3-12 1-19M120 136c-3-7 3-11 1-18" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity=".7"/>
+      <path d="M128 124c8-8 17-10 24-5-3 9-12 13-24 5Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    </symbol>
+    <symbol id="g-window" viewBox="0 0 200 240">
+      <path d="M40 196V96c0-34 27-61 60-61s60 27 60 61v100" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M40 196h120M100 35v161M40 96h120M40 146h120" fill="none" stroke="currentColor" stroke-width="1.1"/>
+      <path d="M60 196v-30h18v30M142 196v-27h12v27" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M78 226c-3-16 4-30 18-38M96 226c-1-12 5-21 15-26M96 226c-7-9-17-13-27-12" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M57 226h48" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    </symbol>
+    <symbol id="g-shelf" viewBox="0 0 200 240">
+      <path d="M42 70h116M42 128h116M42 186h116M52 70v132M148 70v132" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M61 70V54h18v16M91 70V50h15v20M128 70V57h16v13" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M60 128v-18c0-6 4-10 10-10h3c6 0 10 4 10 10v18M104 128V99h24v29" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M110 104h12M110 111h12M66 138c-3 10-1 18 7 21 7-3 9-11 6-21" fill="none" stroke="currentColor" stroke-width="1.1"/>
+      <path d="M68 186v-16h20v16M104 186v-24h13v24M128 186v-11h14v11" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M78 170c-6-12 4-19 11-22 2 9 0 17-5 22M118 162c-4-10 2-17 9-20 2 8 0 15-4 20" fill="none" stroke="currentColor" stroke-width="1.1"/>
+    </symbol>
+    <symbol id="g-door" viewBox="0 0 200 240">
+      <path d="M52 220V96c0-27 21-49 48-49s48 22 48 49v124" fill="none" stroke="currentColor" stroke-width="1.4"/>
+      <path d="M64 220V99c0-20 16-36 36-36s36 16 36 36v121" fill="none" stroke="currentColor" stroke-width="1.1"/>
+      <path d="M70 220v-67h60v67M70 153h60" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M100 146v-14M92 132h16v-13H92v13Z" fill="none" stroke="currentColor" stroke-width="1.1"/>
+      <circle cx="120" cy="170" r="2.2" fill="none" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M36 220h128M156 206c-3-17 5-29 19-34 2 12-4 26-19 34Z" fill="none" stroke="currentColor" stroke-width="1.2"/>
+    </symbol>
+    <symbol id="g-plant" viewBox="0 0 200 240">
+      <path d="M100 60v58M100 88c-20-3-31-17-30-36 18 2 30 16 30 36ZM100 107c22-3 34-18 33-38-20 2-33 17-33 38ZM100 78c2-22-10-38-28-44-3 20 10 37 28 44ZM100 126c-19 1-31-9-35-24 17-2 31 8 35 24Z" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M76 130h48l-6 66c-9 4-27 4-36 0l-6-66Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+      <path d="M69 148h62M75 166h50M80 184h40" fill="none" stroke="currentColor" stroke-width="1" opacity=".65"/>
+      <path d="M58 130c-8 22 3 33 18 35M142 130c8 22-3 33-18 35" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity=".6"/>
+    </symbol>
+  </svg>
+
+  <div class="page-grain" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-progress></span></div>
+
+  <header class="site-header" data-header>
+    <div class="site-header__inner container">
+      <a class="brand" href="#inicio" aria-label="HorAna — Café de Especialidad, volver al inicio">
+        <img class="brand__mark" data-asset="emblem" src="assets/horana_emblem.png" alt="" width="192" height="192" fetchpriority="high">
+        <span class="brand__wordmark">
+          <span class="brand__name">HorAna</span>
+          <span class="brand__tagline">Café de Especialidad</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a class="nav__link" href="#inicio">Inicio</a>
+        <a class="nav__link" href="#nosotros">Nosotros</a>
+        <a class="nav__link" href="#menu">Menú</a>
+        <a class="nav__link" href="#galeria">Galería</a>
+        <a class="nav__link" href="#ubicacion">Ubicación</a>
+        <a class="nav__link" href="#contacto">Contacto</a>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="btn btn--outline btn--small header-cta" href="#ubicacion">
+          <span>Visitanos</span>
+          <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú de navegación" data-nav-toggle>
+          <span class="nav-toggle__lines" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <dialog class="mobile-nav" id="mobile-nav" aria-label="Menú de navegación">
+    <div class="mobile-nav__top">
+      <a class="mobile-nav__brand" href="#inicio" data-mobile-link>
+        <img data-asset="emblem" src="assets/horana_emblem.png" alt="" width="192" height="192">
+        <span>HorAna</span>
+      </a>
+      <button class="mobile-nav__close" type="button" aria-label="Cerrar menú" data-nav-close>
+        <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+
+    <nav class="mobile-nav__links" aria-label="Navegación móvil">
+      <a href="#inicio" data-mobile-link><span class="mobile-nav__index">01</span>Inicio</a>
+      <a href="#nosotros" data-mobile-link><span class="mobile-nav__index">02</span>Nosotros</a>
+      <a href="#menu" data-mobile-link><span class="mobile-nav__index">03</span>Menú</a>
+      <a href="#galeria" data-mobile-link><span class="mobile-nav__index">04</span>Galería</a>
+      <a href="#ubicacion" data-mobile-link><span class="mobile-nav__index">05</span>Ubicación</a>
+      <a href="#contacto" data-mobile-link><span class="mobile-nav__index">06</span>Contacto</a>
+    </nav>
+
+    <div class="mobile-nav__foot">
+      <p class="mobile-nav__address">Cervantes 610</p>
+      <p class="mobile-nav__note">Café de especialidad · Pastelería artesanal</p>
+      <a class="mobile-nav__instagram" href="#" data-instagram>
+        <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+        <span data-instagram-label>Instagram · Próximamente</span>
+      </a>
+    </div>
+  </dialog>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero__aura" aria-hidden="true"></div>
+
+      <svg class="hero__steam" viewBox="0 0 620 520" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+        <defs>
+          <linearGradient id="steam-fade" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#AA875C" stop-opacity=".55"/>
+            <stop offset="1" stop-color="#AA875C" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <g fill="none" stroke="url(#steam-fade)" stroke-width="1.5" stroke-linecap="round">
+          <path class="steam-line steam-line--1" d="M258 470c-30-58 34-86 6-144-25-51 21-78 6-124-7-21-1-42 15-57"/>
+          <path class="steam-line steam-line--2" d="M310 470c-35-66 42-94 10-156-27-53 26-82 8-130-8-20-3-40 11-57"/>
+          <path class="steam-line steam-line--3" d="M362 470c-28-56 31-88 5-142-24-49 22-76 8-118-6-19 0-37 12-52"/>
+          <path class="steam-line steam-line--4" d="M214 470c-23-45 24-68 4-112-19-42 16-65 4-100"/>
+          <path class="steam-line steam-line--5" d="M406 470c-22-44 25-70 5-114-18-40 17-62 5-97"/>
+        </g>
+      </svg>
+
+      <div class="hero__particles" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="hero__inner container">
+        <p class="hero__kicker" data-reveal="fade" data-delay="80">Casa de café · Cervantes 610</p>
+        <h1 class="sr-only" id="hero-title">HorAna — Café de Especialidad</h1>
+
+        <div class="hero__logo" data-reveal="scale" data-delay="120">
+          <img data-asset="logo" src="assets/horana_logo_transparent.png" alt="HorAna — Café de Especialidad" width="628" height="660" fetchpriority="high">
+        </div>
+
+        <div class="ornament ornament--hero" data-reveal="fade" data-delay="260" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <span class="ornament__dot"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__dot"></span>
+          <span class="ornament__line"></span>
+        </div>
+
+        <p class="hero__lede" data-reveal-up data-delay="320">
+          El ritual del café de especialidad, horneados artesanales y la calidez de una casa de familia en Cervantes 610.
+        </p>
+
+        <div class="hero__actions" data-reveal-up data-delay="420">
+          <a class="btn btn--primary" href="#menu">
+            <span>Explorar menú</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+          </a>
+          <a class="btn btn--outline" href="assets/menu_horana.pdf" data-config-link="menuPdf" download>
+            <span>Descargar menú (PDF)</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <p class="hero__rail" aria-hidden="true">Café de especialidad · Pastelería artesanal</p>
+
+      <a class="hero__scroll" href="#nosotros">
+        <span>Descubrí la casa</span>
+        <i aria-hidden="true"></i>
+      </a>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Café de especialidad <b>◆</b> Pastelería artesanal <b>◆</b> Cervantes 610 <b>◆</b> Hecho con dedicación <b>◆</b></span>
+        <span>Café de especialidad <b>◆</b> Pastelería artesanal <b>◆</b> Cervantes 610 <b>◆</b> Hecho con dedicación <b>◆</b></span>
+      </div>
+    </div>
+
+    <section class="section about" id="nosotros" aria-labelledby="nosotros-title">
+      <svg class="about__sprig" aria-hidden="true"><use href="#i-sprig"/></svg>
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow__index">01</span>
+              <span class="eyebrow__rule" aria-hidden="true"></span>
+              Nuestra casa
+            </p>
+            <h2 class="section-title" id="nosotros-title" data-reveal-up>
+              Un café con <em>oficio de familia.</em>
+            </h2>
+          </div>
+          <div class="section-head__aside" data-reveal-up data-delay="120">
+            <p class="section-lede">
+              HorAna es un proyecto y negocio familiar pensado como un punto de encuentro cercano, cálido y hospitalario.
+            </p>
+            <p>
+              Cada detalle —desde la selección del grano hasta la pastelería casera— se prepara con dedicación artesanal y un trato personalizado, tal como nos gusta recibir en casa.
+            </p>
+          </div>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__manifesto" data-reveal-up>
+            <span class="about__quote-mark" aria-hidden="true">“</span>
+            <p>
+              Creemos en las mesas que invitan a quedarse, en el café que se toma sin apuro y en las cosas hechas a mano. Por eso HorAna se construye todos los días con la misma atención: la de una casa de familia que abre sus puertas.
+            </p>
+            <p class="about__manifesto-sign">Proyecto de familia · Cervantes 610</p>
+          </div>
+
+          <div class="about__values">
+            <article class="value" data-reveal-up data-delay="80">
+              <span class="value__index">01</span>
+              <div>
+                <h3 class="value__title">Del grano a la taza</h3>
+                <p>Café de especialidad elegido con atención y preparado taza por taza, con el cuidado que el grano merece.</p>
+              </div>
+            </article>
+            <article class="value" data-reveal-up data-delay="160">
+              <span class="value__index">02</span>
+              <div>
+                <h3 class="value__title">Horneado en casa</h3>
+                <p>Pastelería casera, hecha con dedicación artesanal para acompañar el ritual de cada día.</p>
+              </div>
+            </article>
+            <article class="value" data-reveal-up data-delay="240">
+              <span class="value__index">03</span>
+              <div>
+                <h3 class="value__title">Trato de casa</h3>
+                <p>Un espacio cercano y hospitalario, donde cada persona que entra se siente parte del lugar.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <article class="certificate" data-reveal-up>
+          <button class="certificate__media" type="button" data-lightbox="certificate" aria-label="Ampliar certificado de barista">
+            <span class="certificate__frame">
+              <img data-asset="baristaCertificate" src="assets/certificado_barista.jpg" alt="Certificado de Barista y Arte Latte de Martín Sebastián del Río, Puro Lab" width="1500" height="1060" loading="lazy">
+            </span>
+            <span class="certificate__zoom">
+              <svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg>
+              Ampliar certificado
+            </span>
+          </button>
+
+          <div class="certificate__body">
+            <p class="eyebrow">
+              <span class="eyebrow__index">02</span>
+              <span class="eyebrow__rule" aria-hidden="true"></span>
+              Formación profesional
+            </p>
+            <h3 class="certificate__title">El aval detrás de cada taza</h3>
+            <p class="certificate__name">Martín Sebastián del Río</p>
+            <p class="certificate__role">Barista certificado</p>
+
+            <dl class="certificate__details">
+              <div>
+                <dt>Certificación</dt>
+                <dd>Curso de Barista y Arte Latte</dd>
+              </div>
+              <div>
+                <dt>Institución</dt>
+                <dd>Puro Lab — Escuela de Baristas</dd>
+              </div>
+              <div>
+                <dt>Aval</dt>
+                <dd>Puro Café · Escuela Gourmet Online</dd>
+              </div>
+              <div>
+                <dt>Director</dt>
+                <dd>Marcos de Lauretis</dd>
+              </div>
+            </dl>
+
+            <p class="certificate__note">
+              La formación detrás de la barra: técnica, sensibilidad y una forma cuidada de preparar cada café.
+            </p>
+            <p class="certificate__source">Vista de referencia · el certificado original se resguarda en el local</p>
+
+            <button class="text-link" type="button" data-lightbox="certificate">
+              <span>Ver certificado</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </button>
+          </div>
+
+          <svg class="certificate__seal" viewBox="0 0 120 120" aria-hidden="true">
+            <circle cx="60" cy="60" r="55" fill="none" stroke="currentColor" stroke-width=".8"/>
+            <circle cx="60" cy="60" r="48" fill="none" stroke="currentColor" stroke-width=".5" stroke-dasharray="1 4"/>
+            <path d="M60 30v22M60 68v22M30 60h22M68 60h22" fill="none" stroke="currentColor" stroke-width=".7"/>
+            <circle cx="60" cy="60" r="8" fill="none" stroke="currentColor" stroke-width=".8"/>
+            <path d="M60 46c5 6 5 10 0 14-5-4-5-8 0-14Z" fill="none" stroke="currentColor" stroke-width=".8"/>
+          </svg>
+        </article>
+      </div>
+    </section>
+
+    <section class="section menu" id="menu" aria-labelledby="menu-title">
+      <div class="container">
+        <div class="section-head section-head--menu">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow__index">03</span>
+              <span class="eyebrow__rule" aria-hidden="true"></span>
+              La carta
+            </p>
+            <h2 class="section-title" id="menu-title" data-reveal-up>
+              El menú <em>de la casa.</em>
+            </h2>
+          </div>
+          <div class="section-head__aside" data-reveal-up data-delay="120">
+            <p class="section-lede">
+              Café de especialidad, horneados artesanales y bebidas frescas. Una carta simple, pensada para acompañar el momento.
+            </p>
+            <div class="menu__actions">
+              <a class="btn btn--primary btn--small" href="assets/menu_horana.pdf" data-config-link="menuPdf" download>
+                <span>Descargar menú en PDF</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+              </a>
+              <button class="btn btn--outline btn--small" type="button" data-lightbox="menu">
+                <span>Ver versión en imagen (JPG)</span>
+                <svg class="icon" aria-hidden="true"><use href="#i-image"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu__filters-wrap" data-reveal-up>
+          <div class="menu__filters" role="group" aria-label="Filtrar el menú por categoría">
+            <button class="filter is-active" type="button" data-menu-filter="todo" aria-pressed="true">Todo</button>
+            <button class="filter" type="button" data-menu-filter="cafe" aria-pressed="false">Café</button>
+            <button class="filter" type="button" data-menu-filter="salado" aria-pressed="false">Salado</button>
+            <button class="filter" type="button" data-menu-filter="dulce" aria-pressed="false">Dulce</button>
+            <button class="filter" type="button" data-menu-filter="bebidas" aria-pressed="false">Bebidas</button>
+          </div>
+          <p class="menu__filter-count" aria-hidden="true"><span data-menu-count>49</span> preparaciones</p>
+        </div>
+        <p class="sr-only" id="menu-status" role="status" aria-live="polite">Mostrando todo el menú.</p>
+
+        <div class="menu-board" data-menu-board data-reveal="fade">
+          <div class="menu-col">
+            <article class="menu-group" data-menu-group="cafe" id="menu-cafe" aria-labelledby="menu-cafe-title">
+              <header class="menu-group__head">
+                <span class="menu-group__index">01</span>
+                <h3 id="menu-cafe-title">Café</h3>
+              </header>
+              <ul class="menu-list">
+                <li>Espresso</li>
+                <li>Americano</li>
+                <li>Macchiato</li>
+                <li>Flat white</li>
+                <li>Capuchino</li>
+                <li>Latte</li>
+                <li>Caramel latte</li>
+                <li>Vainilla latte</li>
+                <li>Moca</li>
+              </ul>
+            </article>
+
+            <article class="menu-group" data-menu-group="salado" id="menu-salado" aria-labelledby="menu-salado-title">
+              <header class="menu-group__head">
+                <span class="menu-group__index">02</span>
+                <h3 id="menu-salado-title">Salado</h3>
+              </header>
+              <ul class="menu-list">
+                <li>Medialuna de manteca / grasa</li>
+                <li>Medialuna con jamón y queso</li>
+                <li>Croissant</li>
+                <li>Croissant con jamón y queso</li>
+                <li>Chipa</li>
+                <li>Tostadas <span class="menu-item__note">(queso crema, mermelada o manteca)</span></li>
+                <li>Roll de canela y azúcar negra</li>
+                <li>Roll de manzana y canela</li>
+                <li>Huevo revuelto</li>
+                <li>Avocado toast</li>
+                <li>Yogurt con granola</li>
+                <li>Tostado de jamón y queso</li>
+                <li>Tostado de pan de chipa</li>
+                <li>Bagel de salmón</li>
+                <li>Bagel de jamón crudo</li>
+                <li>Bagel de lomito</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="menu-col">
+            <article class="menu-group" data-menu-group="dulce" id="menu-dulce" aria-labelledby="menu-dulce-title">
+              <header class="menu-group__head">
+                <span class="menu-group__index">03</span>
+                <h3 id="menu-dulce-title">Dulce</h3>
+              </header>
+
+              <div class="menu-subgroup">
+                <h4 class="menu-subhead">Cuadrados</h4>
+                <ul class="menu-list">
+                  <li>Lemonies</li>
+                  <li>Brownie cheesecake</li>
+                  <li>Brookies</li>
+                </ul>
+              </div>
+
+              <div class="menu-subgroup">
+                <h4 class="menu-subhead">Mini tortas</h4>
+                <ul class="menu-list">
+                  <li>Red velvet</li>
+                  <li>Chocotorta</li>
+                  <li>Cheesecake de arándanos</li>
+                  <li>Matilda</li>
+                </ul>
+              </div>
+
+              <div class="menu-subgroup">
+                <h4 class="menu-subhead">Alfajores</h4>
+                <ul class="menu-list">
+                  <li>Pistacho</li>
+                  <li>Chocotorta</li>
+                  <li>Clásico</li>
+                  <li>Red velvet</li>
+                </ul>
+              </div>
+
+              <div class="menu-subgroup">
+                <h4 class="menu-subhead">Cookies <span class="menu-item__note">(rellenas)</span></h4>
+                <ul class="menu-list">
+                  <li>Nutella</li>
+                  <li>Bon o bon</li>
+                  <li>Dubái</li>
+                  <li>Pistacho y chocolate blanco</li>
+                </ul>
+              </div>
+
+              <div class="menu-subgroup">
+                <h4 class="menu-subhead">Budines</h4>
+                <ul class="menu-list">
+                  <li>Limón y arándanos</li>
+                  <li>Mandarina con chips de chocolate</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="menu-group" data-menu-group="bebidas" id="menu-bebidas" aria-labelledby="menu-bebidas-title">
+              <header class="menu-group__head">
+                <span class="menu-group__index">04</span>
+                <h3 id="menu-bebidas-title">Bebidas</h3>
+              </header>
+              <ul class="menu-list">
+                <li>Jugo naranja exprimido</li>
+                <li>Limonada de menta y jengibre</li>
+                <li>Limonada de frutos rojos</li>
+                <li>Gaseosa línea Coca</li>
+                <li>Aguas saborizadas</li>
+                <li>Agua con gas</li>
+                <li>Agua sin gas</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <div class="menu__foot" data-reveal-up>
+          <p class="menu__note">Disponibilidad sujeta a la producción diaria. Los precios se consultan en el local.</p>
+          <a class="text-link" href="assets/menu_horana.pdf" data-config-link="menuPdf" download>
+            <span>Llevá la carta con vos</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="galeria" aria-labelledby="galeria-title">
+      <div class="container">
+        <div class="section-head section-head--gallery">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow__index">04</span>
+              <span class="eyebrow__rule" aria-hidden="true"></span>
+              Galería
+            </p>
+            <h2 class="section-title" id="galeria-title" data-reveal-up>
+              Un anticipo <em>de lo que se viene.</em>
+            </h2>
+          </div>
+          <div class="section-head__aside" data-reveal-up data-delay="120">
+            <p class="section-lede">
+              Estamos preparando las fotos con la misma calma con la que preparamos el café. Muy pronto vas a poder recorrer la casa desde acá.
+            </p>
+            <div class="gallery-tabs" role="tablist" aria-label="Colecciones de la galería">
+              <button class="gallery-tab is-active" type="button" role="tab" id="tab-productos" aria-selected="true" aria-controls="panel-productos" data-gallery-tab="productos">Nuestros productos</button>
+              <button class="gallery-tab" type="button" role="tab" id="tab-espacio" aria-selected="false" aria-controls="panel-espacio" tabindex="-1" data-gallery-tab="espacio">Nuestro espacio</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-panel" id="panel-productos" role="tabpanel" aria-labelledby="tab-productos" data-gallery-panel="productos">
+          <div class="gallery-grid" data-gallery-grid="productos"></div>
+        </div>
+        <div class="gallery-panel" id="panel-espacio" role="tabpanel" aria-labelledby="tab-espacio" data-gallery-panel="espacio" hidden>
+          <div class="gallery-grid" data-gallery-grid="espacio"></div>
+        </div>
+
+        <noscript>
+          <p class="gallery__noscript">La galería se está preparando. Mientras tanto, podés <a href="assets/menu_horana.pdf">descargar el menú en PDF</a>.</p>
+        </noscript>
+
+        <p class="gallery__note" data-reveal-up>
+          <span class="gallery__note-dot" aria-hidden="true"></span>
+          Próximamente — Galería en preparación
+        </p>
+      </div>
+    </section>
+
+    <section class="section location" id="ubicacion" aria-labelledby="ubicacion-title">
+      <div class="container">
+        <div class="section-head section-head--location">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow__index">05</span>
+              <span class="eyebrow__rule" aria-hidden="true"></span>
+              Encontranos
+            </p>
+            <h2 class="section-title" id="ubicacion-title" data-reveal-up>
+              La puerta está <em>abierta.</em>
+            </h2>
+          </div>
+          <div class="section-head__aside" data-reveal-up data-delay="120">
+            <p class="section-lede">
+              En el corazón de Cervantes 610. Un lugar para encontrarse, quedarse un rato y volver.
+            </p>
+          </div>
+        </div>
+
+        <div class="location__grid">
+          <div class="location__map" data-reveal-up>
+            <iframe
+              src="https://www.google.com/maps?q=Cervantes%20610&output=embed"
+              title="Mapa de HorAna en Cervantes 610"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+              data-map
+            ></iframe>
+            <div class="location__map-caption">
+              <span class="location__pin"><svg class="icon" aria-hidden="true"><use href="#i-map"/></svg></span>
+              <span>HorAna · Cervantes 610</span>
+            </div>
+          </div>
+
+          <aside class="location__info" data-reveal-up data-delay="120">
+            <p class="location__label">Dirección</p>
+            <p class="location__address"><span>Cervantes</span> 610</p>
+            <p class="location__text">
+              Café de especialidad y pastelería artesanal. Te esperamos para vivir el ritual, sin apuro, como en casa.
+            </p>
+            <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&amp;query=Cervantes+610" data-config-link="maps" target="_blank" rel="noopener noreferrer">
+              <span>Abrir en Google Maps</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+            <p class="location__hint">Cómo llegar · Abrir en la app de mapas</p>
+          </aside>
+        </div>
+
+        <div class="reviews" data-reveal-up>
+          <div class="reviews__stars" role="img" aria-label="Cinco estrellas">
+            <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+            <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+          </div>
+          <div class="reviews__copy">
+            <p class="reviews__eyebrow">Reseñas de la comunidad</p>
+            <p class="reviews__quote">“Tu opinión nos ayuda a seguir creciendo como familia. Si nos visitaste, nos encantaría leer tu reseña en Google Maps.”</p>
+          </div>
+          <a class="btn btn--gold" href="#" data-config-link="reviews" target="_blank" rel="noopener noreferrer">
+            <span>Dejar una reseña en Google Maps</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-star"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <div class="section-head section-head--contact">
+          <div>
+            <p class="eyebrow">
+              <span class="eyebrow__index">06</span>
+              <span class="eyebrow__rule" aria-hidden="true"></span>
+              Hablemos
+            </p>
+            <h2 class="section-title" id="contacto-title" data-reveal-up>
+              Cerca, <em>como en casa.</em>
+            </h2>
+          </div>
+          <div class="section-head__aside" data-reveal-up data-delay="120">
+            <p class="section-lede">
+              Estamos preparando nuestros canales directos. Por ahora, la mejor forma de encontrarnos es venir a Cervantes 610.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__channels" data-reveal-up>
+            <a class="channel" href="#" data-channel="whatsapp">
+              <span class="channel__icon"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+              <span class="channel__body">
+                <span class="channel__label">WhatsApp</span>
+                <span class="channel__desc">Escribinos directo</span>
+                <span class="channel__badge">Próximamente disponible</span>
+              </span>
+              <svg class="channel__arrow icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+
+            <a class="channel" href="#" data-channel="phone">
+              <span class="channel__icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span>
+              <span class="channel__body">
+                <span class="channel__label">Teléfono</span>
+                <span class="channel__desc">Llamanos</span>
+                <span class="channel__badge">Próximamente disponible</span>
+              </span>
+              <svg class="channel__arrow icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+
+            <a class="channel" href="#" data-channel="email">
+              <span class="channel__icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span>
+              <span class="channel__body">
+                <span class="channel__label">Correo electrónico</span>
+                <span class="channel__desc">Escribinos</span>
+                <span class="channel__badge">Próximamente disponible</span>
+              </span>
+              <svg class="channel__arrow icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </div>
+
+          <aside class="instagram-card" data-reveal-up data-delay="140">
+            <svg class="instagram-card__sprig" aria-hidden="true"><use href="#i-sprig"/></svg>
+            <span class="instagram-card__icon"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></span>
+            <p class="instagram-card__eyebrow">Redes</p>
+            <h3 class="instagram-card__title">Instagram <em>· Próximamente</em></h3>
+            <p class="instagram-card__text">
+              Estamos preparando nuestro perfil oficial. Ahí vas a encontrar las fotos, los horneados del día y un poco de la vida de la casa.
+            </p>
+            <a class="text-link text-link--light" href="#" data-instagram>
+              <span data-instagram-label>Seguirnos en Instagram</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
+          </aside>
+        </div>
+
+        <div class="contact__visit" data-reveal-up>
+          <p class="contact__visit-label">Mientras tanto</p>
+          <p class="contact__visit-text">La puerta está abierta en <strong>Cervantes 610</strong>. Pasá a tomar un café.</p>
+          <a class="text-link" href="#ubicacion">
+            <span>Ver ubicación</span>
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer__divider" aria-hidden="true"></div>
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <p class="footer__wordmark">HorAna</p>
+          <p class="footer__tagline">Café de Especialidad</p>
+          <p class="footer__address">Cervantes 610</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Navegación del pie de página">
+          <p class="footer__nav-title">Recorré</p>
+          <a href="#inicio">Inicio</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#menu">Menú</a>
+          <a href="#galeria">Galería</a>
+          <a href="#ubicacion">Ubicación</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+
+        <div class="footer__links">
+          <p class="footer__nav-title">La casa</p>
+          <a href="assets/menu_horana.pdf" data-config-link="menuPdf" download>Menú en PDF</a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Cervantes+610" data-config-link="maps" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+          <a href="#" data-instagram>
+            <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
+            <span data-instagram-label>Instagram · Próximamente</span>
+          </a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+
+      <p class="footer__signature">Horana · Café de Especialidad · Cervantes 610</p>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© <span data-year>2026</span> HorAna. Todos los derechos reservados.</p>
+        <p class="footer__credit">
+          Desarrollado por
+          <a href="https://www.entropydevs.com" target="_blank" rel="noopener noreferrer">
+            Entropy · <span>www.entropydevs.com</span>
+          </a>
+        </p>
+        <a class="footer__top-link" href="#inicio">
+          <span>Volver arriba</span>
+          <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-caption">
+    <div class="lightbox__inner">
+      <button class="lightbox__close" type="button" aria-label="Cerrar imagen" data-lightbox-close>
+        <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+      <figure class="lightbox__figure">
+        <img alt="" data-lightbox-image>
+        <figcaption id="lightbox-caption" data-lightbox-caption></figcaption>
+      </figure>
+      <a class="lightbox__download" href="#" data-lightbox-download hidden>
+        <span>Descargar menú en PDF</span>
+        <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+      </a>
+    </div>
+  </dialog>
+
+  <div class="toast" data-toast role="status" aria-live="polite" aria-atomic="true">
+    <span class="toast__icon" aria-hidden="true">
+      <svg class="icon"><use href="#i-star"/></svg>
+    </span>
+    <p class="toast__message" data-toast-message></p>
+    <button class="toast__close" type="button" aria-label="Cerrar aviso" data-toast-close>
+      <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+    </button>
+  </div>
+</body>
+</html>
