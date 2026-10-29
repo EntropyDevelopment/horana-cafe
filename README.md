@@ -1,6 +1,6 @@
 # HorAna — Café de Especialidad
 
-Landing page editorial para **HorAna**, una casa de café de especialidad y pastelería artesanal en **Cervantes 610**. El sitio está construido con HTML, CSS y JavaScript vanilla: sin frameworks, sin build step y listo para publicar en cualquier hosting estático.
+Landing page editorial para **HorAna**, una casa de café de especialidad y pastelería artesanal en **Cervantes 610, Floresta**. El sitio está construido con HTML, CSS y JavaScript vanilla: sin frameworks, sin build step y listo para publicar en cualquier hosting estático.
 
 - **Repositorio:** [EntropyDevelopment/horana-cafe](https://github.com/EntropyDevelopment/horana-cafe)
 - **Diseño y desarrollo:** [Entropy](https://www.entropydevs.com)
@@ -50,7 +50,8 @@ horana-cafe/
 │   ├── og-horana.jpg
 │   ├── menu_horana.pdf
 │   ├── menu_horana.jpg
-│   └── certificado_barista.jpg
+│   ├── certificado_barista.jpg
+│   └── entropy-logo.webp
 ├── .gitattributes
 ├── .gitignore
 ├── .nojekyll
@@ -68,7 +69,9 @@ const CONFIG = {
   businessName: "HorAna",
   tagline: "Café de Especialidad",
   address: "Cervantes 610",
-  googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Cervantes+610",
+  neighborhood: "Floresta",
+  mapQuery: "Cervantes 610, Floresta, Ciudad Autónoma de Buenos Aires",
+  googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Cervantes+610%2C+Floresta%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires",
   googleReviewsUrl: "#", // Pegar aquí el link directo de reseñas de Google Maps
   instagramUrl: null,    // Cambiar por la URL de Instagram cuando se cree la cuenta
   whatsappNumber: null,  // Cambiar cuando esté disponible
@@ -84,7 +87,8 @@ const CONFIG = {
     emblem: "assets/horana_emblem.png",
     menuPdf: "assets/menu_horana.pdf",
     menuJpg: "assets/menu_horana.jpg",
-    baristaCertificate: "assets/certificado_barista.jpg"
+    baristaCertificate: "assets/certificado_barista.jpg",
+    entropyLogo: "assets/entropy-logo.webp"
   }
 };
 ```
@@ -98,7 +102,7 @@ const CONFIG = {
 | `whatsappNumber` | Convierte la tarjeta de WhatsApp en un enlace `wa.me`. Se recomienda incluir el código de país, por ejemplo `"5491123456789"`. |
 | `phoneNumber` | Convierte la tarjeta de Teléfono en un enlace `tel:`. |
 | `email` | Convierte la tarjeta de Correo en un enlace `mailto:`. |
-| `googleMapsLink` | Actualiza todos los CTA de ubicación. También se usa para construir el embed del mapa a partir de `address`. |
+| `googleMapsLink` | Actualiza todos los CTA de ubicación. El mapa se construye con `mapQuery` para fijar una única ubicación en Cervantes 610, Floresta. |
 
 > Los canales que sigan en `null` conservan el badge **“Próximamente disponible”** y no muestran datos falsos.
 

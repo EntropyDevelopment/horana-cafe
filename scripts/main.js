@@ -8,7 +8,9 @@ const CONFIG = {
   businessName: "HorAna",
   tagline: "Café de Especialidad",
   address: "Cervantes 610",
-  googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Cervantes+610",
+  neighborhood: "Floresta",
+  mapQuery: "Cervantes 610, Floresta, Ciudad Autónoma de Buenos Aires",
+  googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Cervantes+610%2C+Floresta%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires",
   googleReviewsUrl: "#", // Pegar aquí el link directo de reseñas de Google Maps
   instagramUrl: null,    // Cambiar por la URL de Instagram cuando se cree la cuenta
   whatsappNumber: null,  // Cambiar cuando esté disponible
@@ -24,7 +26,8 @@ const CONFIG = {
     emblem: "assets/horana_emblem.png",
     menuPdf: "assets/menu_horana.pdf",
     menuJpg: "assets/menu_horana.jpg",
-    baristaCertificate: "assets/certificado_barista.jpg"
+    baristaCertificate: "assets/certificado_barista.jpg",
+    entropyLogo: "assets/entropy-logo.webp"
   }
 };
 
@@ -105,8 +108,17 @@ function applyConfig() {
 
   const map = $("[data-map]");
   if (map) {
-    map.src = `https://www.google.com/maps?q=${encodeURIComponent(CONFIG.address)}&output=embed`;
+    const query = CONFIG.mapQuery || CONFIG.address;
+    map.src = `https://www.google.com/maps?q=${encodeURIComponent(query)}&z=16&output=embed&hl=es`;
   }
+
+  $$("[data-developer-link]").forEach((link) => {
+    setLink(link, CONFIG.developer.url, true);
+  });
+
+  $$("[data-developer-url]").forEach((label) => {
+    label.textContent = CONFIG.developer.displayUrl;
+  });
 
   const signature = $(".footer__signature");
   if (signature) {
