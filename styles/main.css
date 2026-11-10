@@ -2130,109 +2130,8 @@ ul, ol {
 
 /* 11. Contacto
    ========================================================================== */
-.contact__grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
-  gap: clamp(26px, 4vw, 48px);
-  margin-top: clamp(34px, 5vw, 54px);
-  align-items: stretch;
-}
-
-.contact__channels {
-  display: grid;
-  gap: 10px;
-}
-
-.channel {
-  display: grid;
-  grid-template-columns: 50px minmax(0, 1fr) auto;
-  align-items: center;
-  gap: 17px;
-  min-height: 96px;
-  padding: 16px 19px;
-  background: transparent;
-  border: 1px solid var(--line-soft);
-  text-decoration: none;
-  color: var(--text-main);
-  transition: background 0.45s var(--ease), border-color 0.45s var(--ease), transform 0.45s var(--ease);
-}
-
-.channel:hover {
-  background: var(--bg-secondary);
-  border-color: var(--caramel-gold);
-  transform: translateX(3px);
-}
-
-.channel__icon {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border: 1px solid var(--line-soft);
-  border-radius: 50%;
-  color: var(--espresso);
-  transition: border-color 0.4s var(--ease), background 0.4s var(--ease);
-}
-
-.channel:hover .channel__icon {
-  border-color: var(--caramel-gold);
-  background: var(--bg-primary);
-}
-
-.channel__icon .icon {
-  width: 19px;
-  height: 19px;
-}
-
-.channel__body {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.channel__label {
-  font-family: var(--font-serif);
-  font-size: 1.3rem;
-  font-weight: 600;
-  line-height: 1.2;
-  color: var(--espresso);
-}
-
-.channel__desc {
-  font-size: 0.74rem;
-  color: var(--text-muted);
-}
-
-.channel__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  margin-top: 6px;
-  font-size: 0.52rem;
-  font-weight: 600;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.channel__badge::before {
-  content: "";
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--caramel-gold);
-}
-
-.channel__arrow {
-  width: 16px;
-  height: 16px;
-  color: var(--text-muted);
-  transition: transform 0.45s var(--ease), color 0.45s var(--ease);
-}
-
-.channel:hover .channel__arrow {
-  color: var(--caramel-gold);
-  transform: translate(2px, -2px);
+.section-head--contact .section-title {
+  max-width: 20ch;
 }
 
 .instagram-card {
@@ -2246,6 +2145,27 @@ ul, ol {
   background: var(--espresso);
   color: var(--bg-primary);
   overflow: hidden;
+}
+
+.instagram-card--wide {
+  align-items: center;
+  min-height: 380px;
+  margin-top: clamp(34px, 5vw, 54px);
+  padding: clamp(38px, 6vw, 72px);
+  text-align: center;
+}
+
+.instagram-card--wide .instagram-card__title {
+  max-width: none;
+  font-size: clamp(2rem, 3.6vw, 3rem);
+}
+
+.instagram-card--wide .instagram-card__text {
+  max-width: 52ch;
+}
+
+.instagram-card--wide .btn {
+  margin-top: 4px;
 }
 
 .instagram-card__sprig {
@@ -2864,10 +2784,6 @@ ul, ol {
     grid-column: 1 / -1;
   }
 
-  .contact__grid {
-    grid-template-columns: 1fr;
-  }
-
   .instagram-card {
     min-height: 380px;
   }
@@ -3125,21 +3041,6 @@ ul, ol {
   .reviews .btn {
     width: 100%;
     justify-content: flex-start;
-  }
-
-  .channel {
-    grid-template-columns: 44px minmax(0, 1fr) auto;
-    gap: 13px;
-    padding: 14px;
-  }
-
-  .channel__icon {
-    width: 42px;
-    height: 42px;
-  }
-
-  .channel__label {
-    font-size: 1.17rem;
   }
 
   .instagram-card {

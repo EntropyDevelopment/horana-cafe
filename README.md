@@ -78,10 +78,7 @@ const CONFIG = {
   mapQuery: "Cervantes 610, Floresta, Ciudad Autónoma de Buenos Aires",
   googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Cervantes+610%2C+Floresta%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires",
   googleReviewsUrl: "#", // Pegar aquí el link directo de reseñas de Google Maps
-  instagramUrl: null,    // Cambiar por la URL de Instagram cuando se cree la cuenta
-  whatsappNumber: null,  // Cambiar cuando esté disponible
-  phoneNumber: null,     // Cambiar cuando esté disponible
-  email: null,           // Cambiar cuando esté disponible
+  instagramUrl: "https://www.instagram.com/horana.cafe/",
   developer: {
     name: "Entropy",
     url: "https://www.entropydevs.com",
@@ -99,18 +96,15 @@ const CONFIG = {
 };
 ```
 
-### Activar cada canal
+### Enlaces y datos
 
-| Campo | Efecto al completarlo |
+| Campo | Efecto |
 | --- | --- |
 | `googleReviewsUrl` | El CTA de reseñas abre el enlace directo de Google Maps. Mientras sea `"#"`, muestra un toast elegante. |
-| `instagramUrl` | El bloque de Instagram y los enlaces del menú móvil/footer abren el perfil y pierden la leyenda “Próximamente”. Mientras sea `null`, muestran el toast preparado. |
-| `whatsappNumber` | Convierte la tarjeta de WhatsApp en un enlace `wa.me`. Se recomienda incluir el código de país, por ejemplo `"5491123456789"`. |
-| `phoneNumber` | Convierte la tarjeta de Teléfono en un enlace `tel:`. |
-| `email` | Convierte la tarjeta de Correo en un enlace `mailto:`. |
+| `instagramUrl` | El bloque de Instagram y los enlaces del menú móvil/footer abren el perfil **@horana.cafe**. Si se deja en `null`, muestran el toast preparado. |
 | `googleMapsLink` | Actualiza todos los CTA de ubicación. El mapa se construye con `mapQuery` para fijar una única ubicación en Cervantes 610, Floresta. |
 
-> Los canales que sigan en `null` conservan el badge **“Próximamente disponible”** y no muestran datos falsos.
+La sección de contacto no muestra teléfonos ni correos electrónicos: solo el perfil de Instagram y la dirección del local.
 
 ### Rutas de assets
 
@@ -250,8 +244,7 @@ La publicación está configurada desde la rama `main` / carpeta raíz (`/`) y e
 
 - [ ] Reemplazar el certificado de referencia por la foto oficial.
 - [ ] Completar `googleReviewsUrl` con el enlace directo de reseñas.
-- [ ] Crear y enlazar `instagramUrl`.
-- [ ] Completar `whatsappNumber`, `phoneNumber` y `email` cuando estén disponibles.
+- [x] Instagram activo: [@horana.cafe](https://www.instagram.com/horana.cafe/).
 - [ ] Actualizar las URLs absolutas de Open Graph/Twitter si se define el dominio final.
 - [x] Mapa fijado en Cervantes 610, Floresta.
 

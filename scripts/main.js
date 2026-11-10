@@ -12,10 +12,7 @@ const CONFIG = {
   mapQuery: "Cervantes 610, Floresta, Ciudad Autónoma de Buenos Aires",
   googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Cervantes+610%2C+Floresta%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires",
   googleReviewsUrl: "#", // Pegar aquí el link directo de reseñas de Google Maps
-  instagramUrl: null,    // Cambiar por la URL de Instagram cuando se cree la cuenta
-  whatsappNumber: null,  // Cambiar cuando esté disponible
-  phoneNumber: null,     // Cambiar cuando esté disponible
-  email: null,           // Cambiar cuando esté disponible
+  instagramUrl: "https://www.instagram.com/horana.cafe/",
   developer: {
     name: "Entropy",
     url: "https://www.entropydevs.com",
@@ -129,10 +126,7 @@ const GALLERY = {
 
 const TOAST_MESSAGES = {
   instagram: "Estamos preparando nuestro perfil oficial de Instagram. ¡Muy pronto vas a poder seguirnos!",
-  reviews: "El enlace directo a las reseñas estará disponible muy pronto. Mientras tanto, podés buscarnos en Google Maps como HorAna — Café de Especialidad.",
-  whatsapp: "Nuestro WhatsApp estará disponible muy pronto. Por ahora, te esperamos en Cervantes 610.",
-  phone: "El teléfono directo estará disponible muy pronto. Por ahora, te esperamos en Cervantes 610.",
-  email: "Nuestro correo estará disponible muy pronto. Por ahora, te esperamos en Cervantes 610."
+  reviews: "El enlace directo a las reseñas estará disponible muy pronto. Mientras tanto, podés buscarnos en Google Maps como HorAna — Café de Especialidad."
 };
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -628,47 +622,8 @@ function initToast() {
 }
 
 /* --------------------------------------------------------------------------
-   Estados de contacto, Instagram y reseñas
+   Instagram y reseñas
    -------------------------------------------------------------------------- */
-function initContactChannels(toast) {
-  const channels = {
-    whatsapp: { value: CONFIG.whatsappNumber, message: TOAST_MESSAGES.whatsapp },
-    phone: { value: CONFIG.phoneNumber, message: TOAST_MESSAGES.phone },
-    email: { value: CONFIG.email, message: TOAST_MESSAGES.email }
-  };
-
-  $$("[data-channel]").forEach((link) => {
-    const type = link.dataset.channel;
-    const badge = $(".channel__badge", link);
-    let value = channels[type]?.value;
-    let href = null;
-
-    if (type === "whatsapp" && value) href = `https://wa.me/${String(value).replace(/\D/g, "")}`;
-    if (type === "phone" && value) href = `tel:${String(value).replace(/\s/g, "")}`;
-    if (type === "email" && value) href = `mailto:${value}`;
-
-    if (href) {
-      link.href = href;
-      link.removeAttribute("aria-disabled");
-      link.removeAttribute("aria-description");
-      if (badge) badge.remove();
-      if (type === "whatsapp") {
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-      }
-      return;
-    }
-
-    link.setAttribute("href", "#");
-    link.removeAttribute("aria-disabled");
-    link.setAttribute("aria-description", "Próximamente disponible");
-    link.addEventListener("click", (event) => {
-      event.preventDefault();
-      toast?.show(channels[type]?.message || "Este canal estará disponible muy pronto.");
-    });
-  });
-}
-
 function initInstagram(toast) {
   const links = $$("[data-instagram]");
   if (!links.length) return;
@@ -725,7 +680,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initMenuFilters();
   initReveal();
   initLightbox();
-  initContactChannels(toast);
   initInstagram(toast);
   initReviews(toast);
 });
