@@ -99,7 +99,7 @@ const CONFIG = {
 | Campo | Efecto |
 | --- | --- |
 | `googleReviewsUrl` | El CTA de reseñas abre el enlace directo de Google Maps. Mientras sea `"#"`, muestra un toast elegante. |
-| `instagramUrl` | El bloque de Instagram y los enlaces del menú móvil/footer abren el perfil **@horana.cafe**. Si se deja en `null`, muestran el toast preparado. |
+| `instagramUrl` | El bloque de Instagram y el enlace del menú móvil abren el perfil **@horana.cafe**. Si se deja en `null`, muestran el toast preparado. |
 | `googleMapsLink` | Actualiza todos los CTA de ubicación con el enlace corto de Google Maps. El mapa embebido se construye con `mapQuery` para fijar una única ubicación en Cervantes 610, Floresta. |
 
 La sección de contacto no muestra teléfonos ni correos electrónicos: solo el perfil de Instagram y la dirección del local.
