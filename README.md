@@ -43,9 +43,8 @@ horana-cafe/
 │   └── prepare_assets.py       # Generación de assets derivados (herramienta interna)
 ├── assets/
 │   ├── galeria/
-│   │   ├── delicias/            # Fotos de chipa, rolls, croissants, budín y cookie
+│   │   ├── delicias/            # Chipa, rolls, medialunas, croissants, budín y cookie
 │   │   └── espacio/             # Fachada, salón y vistas nocturnas
-│   ├── historia-horana.jpg      # Foto del pergamino de la sección Nuestra casa
 │   ├── horana_logo_transparent.png
 │   ├── horana_emblem.png
 │   ├── horana_logo.jpg
@@ -76,7 +75,7 @@ const CONFIG = {
   address: "Cervantes 610",
   neighborhood: "Floresta",
   mapQuery: "Cervantes 610, Floresta, Ciudad Autónoma de Buenos Aires",
-  googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Cervantes+610%2C+Floresta%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires",
+  googleMapsLink: "https://maps.app.goo.gl/cgvFmFHo3A5579jQA",
   googleReviewsUrl: "#", // Pegar aquí el link directo de reseñas de Google Maps
   instagramUrl: "https://www.instagram.com/horana.cafe/",
   developer: {
@@ -90,8 +89,7 @@ const CONFIG = {
     menuPdf: "assets/menu_horana.pdf",
     menuJpg: "assets/menu_horana.jpg",
     baristaCertificate: "assets/certificado_barista.jpg",
-    entropyLogo: "assets/entropy-logo.webp",
-    historyImage: "assets/historia-horana.jpg"
+    entropyLogo: "assets/entropy-logo.webp"
   }
 };
 ```
@@ -102,7 +100,7 @@ const CONFIG = {
 | --- | --- |
 | `googleReviewsUrl` | El CTA de reseñas abre el enlace directo de Google Maps. Mientras sea `"#"`, muestra un toast elegante. |
 | `instagramUrl` | El bloque de Instagram y los enlaces del menú móvil/footer abren el perfil **@horana.cafe**. Si se deja en `null`, muestran el toast preparado. |
-| `googleMapsLink` | Actualiza todos los CTA de ubicación. El mapa se construye con `mapQuery` para fijar una única ubicación en Cervantes 610, Floresta. |
+| `googleMapsLink` | Actualiza todos los CTA de ubicación con el enlace corto de Google Maps. El mapa embebido se construye con `mapQuery` para fijar una única ubicación en Cervantes 610, Floresta. |
 
 La sección de contacto no muestra teléfonos ni correos electrónicos: solo el perfil de Instagram y la dirección del local.
 
@@ -114,7 +112,7 @@ La sección de contacto no muestra teléfonos ni correos electrónicos: solo el 
 
 ## 4. Galería, fotos e historia
 
-La sección **04 — Galería** se llama **“Algunas de nuestras delicias”** y tiene dos colecciones: **Nuestras delicias** y **Nuestro espacio**. Todas las fotos se generan desde el objeto `GALLERY` en `scripts/main.js`:
+La sección **04 — Galería** se llama **“Algunas de nuestras delicias”** y muestra dos bloques: las fotos de la cocina y, debajo, **Nuestro espacio** con las imágenes del local. Todas las fotos se generan desde el objeto `GALLERY` en `scripts/main.js`:
 
 ```js
 const GALLERY = {
@@ -146,7 +144,7 @@ Para agregar o reemplazar una foto:
 
 ### La historia de Nuestra casa
 
-La sección **01 — Nuestra casa** incluye la foto del pergamino `assets/historia-horana.jpg` y el texto completo de la historia de Horacio y Ana dentro de una cita. Para cambiar el texto, editá `.about__story-text` en `index.html`. Para reemplazar la foto, cambiá `assets/historia-horana.jpg` manteniendo el mismo nombre.
+La sección **01 — Nuestra casa** conserva únicamente el texto completo de la historia de Horacio y Ana dentro de una cita centrada; no incluye la fotografía del pergamino. Para cambiar el texto, editá `.about__story-text` en `index.html`.
 
 ---
 

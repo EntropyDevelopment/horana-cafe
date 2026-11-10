@@ -364,14 +364,7 @@
         </div>
 
         <div class="about__story">
-          <figure class="about__portrait" data-reveal-up>
-            <span class="about__portrait-frame">
-              <img data-asset="historyImage" src="assets/historia-horana.jpg" alt="Pergamino en la pared de HorAna con la historia de Horacio y Ana" width="900" height="1600" loading="lazy">
-            </span>
-            <figcaption>La historia que nos dio nombre, en la pared del local.</figcaption>
-          </figure>
-
-          <blockquote class="about__manifesto" data-reveal-up data-delay="120">
+          <blockquote class="about__manifesto" data-reveal-up>
             <span class="about__quote-mark" aria-hidden="true">“</span>
             <div class="about__story-text">
               <p class="about__story-lead">Un nombre. Dos historias. Un amor que permanece.</p>
@@ -654,18 +647,31 @@
             <p class="section-lede">
               Una pequeña muestra de lo que sale de nuestra cocina y de los rincones que hacen a HorAna.
             </p>
-            <div class="gallery-tabs" role="tablist" aria-label="Colecciones de fotos">
-              <button class="gallery-tab is-active" type="button" role="tab" id="tab-delicias" aria-selected="true" aria-controls="panel-delicias" data-gallery-tab="delicias">Nuestras delicias</button>
-              <button class="gallery-tab" type="button" role="tab" id="tab-espacio" aria-selected="false" aria-controls="panel-espacio" tabindex="-1" data-gallery-tab="espacio">Nuestro espacio</button>
-            </div>
+            <a class="text-link" href="https://www.instagram.com/horana.cafe/" target="_blank" rel="noopener noreferrer" data-instagram>
+              <span>Más fotos en @horana.cafe</span>
+              <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+            </a>
           </div>
         </div>
 
-        <div class="gallery-panel" id="panel-delicias" role="tabpanel" aria-labelledby="tab-delicias" data-gallery-panel="delicias">
-          <div class="gallery-grid" data-gallery-grid="delicias"></div>
+        <div class="gallery-block">
+          <div class="gallery-grid gallery-grid--delicias" data-gallery-grid="delicias"></div>
         </div>
-        <div class="gallery-panel" id="panel-espacio" role="tabpanel" aria-labelledby="tab-espacio" data-gallery-panel="espacio" hidden>
-          <div class="gallery-grid" data-gallery-grid="espacio"></div>
+
+        <div class="gallery-space">
+          <div class="gallery-space__head" data-reveal-up>
+            <div>
+              <p class="eyebrow">
+                <span class="eyebrow__rule" aria-hidden="true"></span>
+                El lugar
+              </p>
+              <h3 class="gallery-space__title">Nuestro espacio</h3>
+            </div>
+            <p class="gallery-space__text">
+              La fachada, el salón y la esquina de Cervantes 610. La casa por dentro y por fuera.
+            </p>
+          </div>
+          <div class="gallery-grid gallery-grid--espacio" data-gallery-grid="espacio"></div>
         </div>
 
         <noscript>
@@ -716,7 +722,7 @@
             <p class="location__text">
               Café de especialidad y pastelería artesanal en Floresta. Te esperamos para vivir el ritual, sin apuro, como en casa.
             </p>
-            <a class="btn btn--primary" href="https://www.google.com/maps/search/?api=1&amp;query=Cervantes+610%2C+Floresta%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires" data-config-link="maps" target="_blank" rel="noopener noreferrer">
+            <a class="btn btn--primary" href="https://maps.app.goo.gl/cgvFmFHo3A5579jQA" data-config-link="maps" target="_blank" rel="noopener noreferrer">
               <span>Abrir en Google Maps</span>
               <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
             </a>
@@ -804,7 +810,7 @@
         <div class="footer__links">
           <p class="footer__nav-title">La casa</p>
           <a href="assets/menu_horana.pdf" data-config-link="menuPdf" download>Menú en PDF</a>
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=Cervantes+610%2C+Floresta%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires" data-config-link="maps" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
+          <a href="https://maps.app.goo.gl/cgvFmFHo3A5579jQA" data-config-link="maps" target="_blank" rel="noopener noreferrer">Cómo llegar</a>
           <a href="https://www.instagram.com/horana.cafe/" target="_blank" rel="noopener noreferrer" data-instagram>
             <svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg>
             <span data-instagram-label>Instagram</span>

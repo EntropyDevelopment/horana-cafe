@@ -10,7 +10,7 @@ const CONFIG = {
   address: "Cervantes 610",
   neighborhood: "Floresta",
   mapQuery: "Cervantes 610, Floresta, Ciudad Autónoma de Buenos Aires",
-  googleMapsLink: "https://www.google.com/maps/search/?api=1&query=Cervantes+610%2C+Floresta%2C+Ciudad+Aut%C3%B3noma+de+Buenos+Aires",
+  googleMapsLink: "https://maps.app.goo.gl/cgvFmFHo3A5579jQA",
   googleReviewsUrl: "#", // Pegar aquí el link directo de reseñas de Google Maps
   instagramUrl: "https://www.instagram.com/horana.cafe/",
   developer: {
@@ -24,8 +24,7 @@ const CONFIG = {
     menuPdf: "assets/menu_horana.pdf",
     menuJpg: "assets/menu_horana.jpg",
     baristaCertificate: "assets/certificado_barista.jpg",
-    entropyLogo: "assets/entropy-logo.webp",
-    historyImage: "assets/historia-horana.jpg"
+    entropyLogo: "assets/entropy-logo.webp"
   }
 };
 
@@ -57,13 +56,22 @@ const GALLERY = {
       height: 1200
     },
     {
+      title: "Medialunas",
+      note: "De manteca, recién horneadas.",
+      icon: "g-croissant",
+      src: "assets/galeria/delicias/medialunas.jpg",
+      alt: "Medialunas de manteca recién horneadas en HorAna",
+      width: 1200,
+      height: 1600
+    },
+    {
       title: "Croissants",
       note: "Hojaldre de manteca, hecho en casa.",
       icon: "g-croissant",
       src: "assets/galeria/delicias/croissants.jpg",
       alt: "Croissants de manteca recién horneados",
-      width: 1200,
-      height: 1600
+      width: 1600,
+      height: 1200
     },
     {
       title: "Budín de limón y arándanos",
@@ -321,13 +329,6 @@ function initReveal() {
   elements.forEach((element) => revealObserver.observe(element));
 }
 
-function observeNewReveals(scope) {
-  if (!revealObserver) return;
-  const elements = $$("[data-reveal], [data-reveal-up]", scope);
-  prepareReveal(elements);
-  elements.forEach((element) => revealObserver.observe(element));
-}
-
 /* --------------------------------------------------------------------------
    Menú: filtros por categoría
    -------------------------------------------------------------------------- */
@@ -444,62 +445,14 @@ function buildGalleryCard(item, index) {
 }
 
 function initGallery() {
-  const tabs = $$("[data-gallery-tab]");
-  const panels = $$("[data-gallery-panel]");
-  if (!tabs.length || !panels.length) return;
+  const grids = $$("[data-gallery-grid]");
+  if (!grids.length) return;
 
   Object.entries(GALLERY).forEach(([key, items]) => {
     const grid = $(`[data-gallery-grid="${key}"]`);
     if (!grid) return;
     items.forEach((item, index) => grid.appendChild(buildGalleryCard(item, index)));
   });
-
-  const activate = (key, forceReveal = false) => {
-    tabs.forEach((tab) => {
-      const active = tab.dataset.galleryTab === key;
-      tab.classList.toggle("is-active", active);
-      tab.setAttribute("aria-selected", String(active));
-      tab.tabIndex = active ? 0 : -1;
-    });
-
-    panels.forEach((panel) => {
-      panel.hidden = panel.dataset.galleryPanel !== key;
-    });
-
-    const activePanel = $(`[data-gallery-panel="${key}"]`);
-    if (!activePanel) return;
-
-    if (forceReveal) {
-      const cards = $$("[data-reveal-up]", activePanel);
-      prepareReveal(cards);
-      window.requestAnimationFrame(() => {
-        cards.forEach((card) => {
-          card.classList.add("is-revealed");
-          revealObserver?.unobserve(card);
-        });
-      });
-    } else {
-      observeNewReveals(activePanel);
-    }
-  };
-
-  tabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => activate(tab.dataset.galleryTab, true));
-    tab.addEventListener("keydown", (event) => {
-      let nextIndex = null;
-      if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
-      if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
-      if (event.key === "Home") nextIndex = 0;
-      if (event.key === "End") nextIndex = tabs.length - 1;
-      if (nextIndex === null) return;
-      event.preventDefault();
-      const next = tabs[nextIndex];
-      next.focus();
-      activate(next.dataset.galleryTab, true);
-    });
-  });
-
-  activate("delicias");
 }
 
 /* --------------------------------------------------------------------------
