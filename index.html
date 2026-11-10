@@ -372,38 +372,49 @@
           </div>
         </div>
 
-        <div class="about__grid">
-          <div class="about__manifesto" data-reveal-up>
-            <span class="about__quote-mark" aria-hidden="true">“</span>
-            <p>
-              Creemos en las mesas que invitan a quedarse, en el café que se toma sin apuro y en las cosas hechas a mano. Por eso HorAna se construye todos los días con la misma atención: la de una casa de familia que abre sus puertas.
-            </p>
-            <p class="about__manifesto-sign">Proyecto de familia · Cervantes 610</p>
-          </div>
+        <div class="about__story">
+          <figure class="about__portrait" data-reveal-up>
+            <span class="about__portrait-frame">
+              <img data-asset="historyImage" src="assets/historia-horana.jpg" alt="Pergamino en la pared de HorAna con la historia de Horacio y Ana" width="900" height="1600" loading="lazy">
+            </span>
+            <figcaption>La historia que nos dio nombre, en la pared del local.</figcaption>
+          </figure>
 
-          <div class="about__values">
-            <article class="value" data-reveal-up data-delay="80">
-              <span class="value__index">01</span>
-              <div>
-                <h3 class="value__title">Del grano a la taza</h3>
-                <p>Café de especialidad elegido con atención y preparado taza por taza, con el cuidado que el grano merece.</p>
-              </div>
-            </article>
-            <article class="value" data-reveal-up data-delay="160">
-              <span class="value__index">02</span>
-              <div>
-                <h3 class="value__title">Horneado en casa</h3>
-                <p>Pastelería casera, hecha con dedicación artesanal para acompañar el ritual de cada día.</p>
-              </div>
-            </article>
-            <article class="value" data-reveal-up data-delay="240">
-              <span class="value__index">03</span>
-              <div>
-                <h3 class="value__title">Trato de casa</h3>
-                <p>Un espacio cercano y hospitalario, donde cada persona que entra se siente parte del lugar.</p>
-              </div>
-            </article>
-          </div>
+          <blockquote class="about__manifesto" data-reveal-up data-delay="120">
+            <span class="about__quote-mark" aria-hidden="true">“</span>
+            <div class="about__story-text">
+              <p class="about__story-lead">Un nombre. Dos historias. Un amor que permanece.</p>
+              <p>Horana nace de la unión de Horacio y Ana, mis padres.</p>
+              <p>Hoy ya no están físicamente con nosotros, pero siguen presentes en cada recuerdo, en cada enseñanza y en todo el amor que dejaron.</p>
+              <p>Este lugar lleva sus nombres para que su historia continúe viva, en cada encuentro, cada charla y cada café compartido.</p>
+              <p>Porque hay personas que se van, pero dejan un amor que permanece para siempre.</p>
+              <p class="about__story-welcome">Bienvenidos a Horana. <em>Un café con historia, un lugar hecho con amor.</em><span class="about__quote-close" aria-hidden="true">”</span></p>
+            </div>
+          </blockquote>
+        </div>
+
+        <div class="about__values about__values--row">
+          <article class="value" data-reveal-up data-delay="80">
+            <span class="value__index">01</span>
+            <div>
+              <h3 class="value__title">Del grano a la taza</h3>
+              <p>Café de especialidad elegido con atención y preparado taza por taza, con el cuidado que el grano merece.</p>
+            </div>
+          </article>
+          <article class="value" data-reveal-up data-delay="160">
+            <span class="value__index">02</span>
+            <div>
+              <h3 class="value__title">Horneado en casa</h3>
+              <p>Pastelería casera, hecha con dedicación artesanal para acompañar el ritual de cada día.</p>
+            </div>
+          </article>
+          <article class="value" data-reveal-up data-delay="240">
+            <span class="value__index">03</span>
+            <div>
+              <h3 class="value__title">Trato de casa</h3>
+              <p>Un espacio cercano y hospitalario, donde cada persona que entra se siente parte del lugar.</p>
+            </div>
+          </article>
         </div>
 
         <article class="certificate" data-reveal-up>
@@ -645,35 +656,30 @@
               Galería
             </p>
             <h2 class="section-title" id="galeria-title" data-reveal-up>
-              Un anticipo <em>de lo que se viene.</em>
+              Algunas de nuestras <em>delicias.</em>
             </h2>
           </div>
           <div class="section-head__aside" data-reveal-up data-delay="120">
             <p class="section-lede">
-              Estamos preparando las fotos con la misma calma con la que preparamos el café. Muy pronto vas a poder recorrer la casa desde acá.
+              Una pequeña muestra de lo que sale de nuestra cocina y de los rincones que hacen a HorAna.
             </p>
-            <div class="gallery-tabs" role="tablist" aria-label="Colecciones de la galería">
-              <button class="gallery-tab is-active" type="button" role="tab" id="tab-productos" aria-selected="true" aria-controls="panel-productos" data-gallery-tab="productos">Nuestros productos</button>
+            <div class="gallery-tabs" role="tablist" aria-label="Colecciones de fotos">
+              <button class="gallery-tab is-active" type="button" role="tab" id="tab-delicias" aria-selected="true" aria-controls="panel-delicias" data-gallery-tab="delicias">Nuestras delicias</button>
               <button class="gallery-tab" type="button" role="tab" id="tab-espacio" aria-selected="false" aria-controls="panel-espacio" tabindex="-1" data-gallery-tab="espacio">Nuestro espacio</button>
             </div>
           </div>
         </div>
 
-        <div class="gallery-panel" id="panel-productos" role="tabpanel" aria-labelledby="tab-productos" data-gallery-panel="productos">
-          <div class="gallery-grid" data-gallery-grid="productos"></div>
+        <div class="gallery-panel" id="panel-delicias" role="tabpanel" aria-labelledby="tab-delicias" data-gallery-panel="delicias">
+          <div class="gallery-grid" data-gallery-grid="delicias"></div>
         </div>
         <div class="gallery-panel" id="panel-espacio" role="tabpanel" aria-labelledby="tab-espacio" data-gallery-panel="espacio" hidden>
           <div class="gallery-grid" data-gallery-grid="espacio"></div>
         </div>
 
         <noscript>
-          <p class="gallery__noscript">La galería se está preparando. Mientras tanto, podés <a href="assets/menu_horana.pdf">descargar el menú en PDF</a>.</p>
+          <p class="gallery__noscript">Activá JavaScript para ver las fotos de la galería. Mientras tanto, podés <a href="assets/menu_horana.pdf">descargar el menú en PDF</a>.</p>
         </noscript>
-
-        <p class="gallery__note" data-reveal-up>
-          <span class="gallery__note-dot" aria-hidden="true"></span>
-          Próximamente — Galería en preparación
-        </p>
       </div>
     </section>
 

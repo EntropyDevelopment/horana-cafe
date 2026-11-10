@@ -27,34 +27,103 @@ const CONFIG = {
     menuPdf: "assets/menu_horana.pdf",
     menuJpg: "assets/menu_horana.jpg",
     baristaCertificate: "assets/certificado_barista.jpg",
-    entropyLogo: "assets/entropy-logo.webp"
+    entropyLogo: "assets/entropy-logo.webp",
+    historyImage: "assets/historia-horana.jpg"
   }
 };
 
 /* --------------------------------------------------------------------------
    Galería editable
-   Para publicar una foto real, completar `src` con la ruta y `alt` descriptivo.
-   Las tarjetas sin `src` muestran la ilustración de línea y el estado
-   "Próximamente". Ejemplo:
-   { title: "Latte art", icon: "g-latte", src: "assets/galeria/latte.jpg",
-     alt: "Taza de latte con arte de corazón sobre la barra de HorAna" }
+   Las fotos reales se cargan desde `src`. Si una foto falta, la tarjeta vuelve
+   a mostrar la ilustración de línea correspondiente al `icon`.
+   Para agregar una foto: copiarla a assets/galeria/delicias o /espacio y sumar
+   un objeto con title, note, src, alt, width y height.
    -------------------------------------------------------------------------- */
 const GALLERY = {
-  productos: [
-    { title: "Latte art", icon: "g-latte", src: null, alt: "Taza de latte con arte de corazón" },
-    { title: "Croissant", icon: "g-croissant", src: null, alt: "Croissant recién horneado" },
-    { title: "Cookies rellenas", icon: "g-cookies", src: null, alt: "Cookies rellenas de la casa" },
-    { title: "Mini tortas", icon: "g-cake", src: null, alt: "Porción de mini torta artesanal" },
-    { title: "Bagels", icon: "g-bagel", src: null, alt: "Bagel de la carta de HorAna" },
-    { title: "Filtrados", icon: "g-pourover", src: null, alt: "Café filtrado preparado en V60" }
+  delicias: [
+    {
+      title: "Chipa",
+      note: "Recién horneada, con el queso justo.",
+      icon: "g-bagel",
+      src: "assets/galeria/delicias/chipa.jpg",
+      alt: "Chipa recién horneada en HorAna",
+      width: 1200,
+      height: 1600
+    },
+    {
+      title: "Rolls de canela",
+      note: "Canela, azúcar negra y masa tierna.",
+      icon: "g-croissant",
+      src: "assets/galeria/delicias/rolls-de-canela.jpg",
+      alt: "Rolls de canela y azúcar negra de HorAna",
+      width: 1600,
+      height: 1200
+    },
+    {
+      title: "Croissants",
+      note: "Hojaldre de manteca, hecho en casa.",
+      icon: "g-croissant",
+      src: "assets/galeria/delicias/croissants.jpg",
+      alt: "Croissants de manteca recién horneados",
+      width: 1200,
+      height: 1600
+    },
+    {
+      title: "Budín de limón y arándanos",
+      note: "Cítrico, húmedo y con frutos rojos.",
+      icon: "g-cake",
+      src: "assets/galeria/delicias/budin-limon-arandanos.jpg",
+      alt: "Budín de limón y arándanos de HorAna",
+      width: 1200,
+      height: 1600
+    },
+    {
+      title: "Cookie rellena",
+      note: "Red velvet con relleno de queso crema.",
+      icon: "g-cookies",
+      src: "assets/galeria/delicias/cookie-red-velvet.jpg",
+      alt: "Cookie rellena de red velvet y queso crema",
+      width: 1200,
+      height: 1600
+    }
   ],
   espacio: [
-    { title: "La barra", icon: "g-bar", src: null, alt: "Barra de café y máquina de espresso de HorAna" },
-    { title: "La mesa", icon: "g-table", src: null, alt: "Mesa preparada para dos en el salón" },
-    { title: "La ventana", icon: "g-window", src: null, alt: "Ventana del local con luz de tarde" },
-    { title: "La repisa", icon: "g-shelf", src: null, alt: "Repisa con plantas y objetos de la casa" },
-    { title: "La puerta", icon: "g-door", src: null, alt: "Entrada de HorAna en Cervantes 610" },
-    { title: "El rincón verde", icon: "g-plant", src: null, alt: "Rincón con plantas del salón" }
+    {
+      title: "La fachada",
+      note: "Cervantes 610, de día.",
+      icon: "g-door",
+      src: "assets/galeria/espacio/fachada-dia.jpg",
+      alt: "Fachada de HorAna en Cervantes 610, Floresta",
+      width: 1200,
+      height: 1600
+    },
+    {
+      title: "El salón",
+      note: "Mesas de madera, luz cálida y gente.",
+      icon: "g-bar",
+      src: "assets/galeria/espacio/salon.jpg",
+      alt: "Salón de HorAna con mesas, barra y clientes",
+      width: 1200,
+      height: 1600
+    },
+    {
+      title: "De noche",
+      note: "La casa se ilumina sobre la vereda.",
+      icon: "g-window",
+      src: "assets/galeria/espacio/fachada-noche.jpg",
+      alt: "Fachada iluminada de HorAna durante la noche",
+      width: 1200,
+      height: 1504
+    },
+    {
+      title: "La esquina",
+      note: "Cervantes 610, después del último café.",
+      icon: "g-plant",
+      src: "assets/galeria/espacio/esquina-noche.jpg",
+      alt: "Esquina de Cervantes 610 de noche, con el cartel de HorAna",
+      width: 900,
+      height: 1600
+    }
   ]
 };
 
@@ -340,28 +409,40 @@ function buildGalleryCard(item, index) {
   const number = String(index + 1).padStart(2, "0");
   const hasImage = Boolean(item.src);
   const illustration = `<svg viewBox="0 0 200 240" aria-hidden="true"><use href="#${item.icon}"/></svg>`;
+  const note = item.note || (hasImage ? "" : "Próximamente — Galería en preparación");
+  const caption = [item.title, item.note].filter(Boolean).join(" — ");
+  const frame = hasImage
+    ? `<button class="gallery-card__frame gallery-card__frame--button" type="button" data-lightbox="gallery" data-gallery-src="${item.src}" data-gallery-alt="${item.alt || item.title}" data-gallery-caption="${caption}" aria-label="Ampliar foto: ${item.title}">`
+    : `<div class="gallery-card__frame">`;
+  const closeFrame = hasImage ? "</button>" : "</div>";
 
   card.innerHTML = `
-    <div class="gallery-card__frame">
+    ${frame}
       ${hasImage ? "" : `<span class="gallery-card__badge">Próximamente</span>`}
       ${illustration}
-      ${hasImage ? `<img src="${item.src}" alt="${item.alt || item.title}" width="800" height="1000" loading="lazy" decoding="async">` : ""}
-    </div>
+      ${hasImage ? `<img src="${item.src}" alt="${item.alt || item.title}" width="${item.width || 1200}" height="${item.height || 1600}" loading="lazy" decoding="async">` : ""}
+    ${closeFrame}
     <div class="gallery-card__meta">
       <span class="gallery-card__index">${number}</span>
       <h3 class="gallery-card__title">${item.title}</h3>
     </div>
-    <p class="gallery-card__note">Próximamente — Galería en preparación</p>
+    ${note ? `<p class="gallery-card__note">${note}</p>` : ""}
   `;
 
   const image = $("img", card);
   if (image) {
     image.addEventListener("error", () => {
       image.remove();
-      card.querySelector(".gallery-card__frame")?.insertAdjacentHTML(
-        "afterbegin",
-        `<span class="gallery-card__badge">Próximamente</span>`
-      );
+      const frameElement = $(".gallery-card__frame", card);
+      if (frameElement) {
+        frameElement.removeAttribute("data-lightbox");
+        frameElement.removeAttribute("data-gallery-src");
+        frameElement.removeAttribute("data-gallery-alt");
+        frameElement.removeAttribute("data-gallery-caption");
+        frameElement.removeAttribute("aria-label");
+        if (frameElement instanceof HTMLButtonElement) frameElement.disabled = true;
+        frameElement.insertAdjacentHTML("afterbegin", `<span class="gallery-card__badge">Foto no disponible</span>`);
+      }
     });
   }
 
@@ -424,7 +505,7 @@ function initGallery() {
     });
   });
 
-  activate("productos");
+  activate("delicias");
 }
 
 /* --------------------------------------------------------------------------
@@ -433,7 +514,7 @@ function initGallery() {
 function initLightbox() {
   const dialog = $("#lightbox");
   const image = $("[data-lightbox-image]");
-  const caption = $("[data-lightbox-caption]");
+  const caption = $("#lightbox-caption");
   const download = $("[data-lightbox-download]");
   const close = $("[data-lightbox-close]");
   if (!dialog || !image) return;
@@ -455,8 +536,14 @@ function initLightbox() {
   let lastTrigger = null;
 
   const open = (type, trigger) => {
-    const item = content[type];
-    if (!item) return;
+    const item = type === "gallery" && trigger
+      ? {
+          src: trigger.dataset.gallerySrc,
+          alt: trigger.dataset.galleryAlt || "Fotografía de HorAna",
+          caption: trigger.dataset.galleryCaption || ""
+        }
+      : content[type];
+    if (!item || !item.src) return;
     lastTrigger = trigger || null;
 
     image.src = item.src;

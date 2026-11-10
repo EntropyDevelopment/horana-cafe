@@ -3,7 +3,7 @@
 Landing page editorial para **HorAna**, una casa de café de especialidad y pastelería artesanal en **Cervantes 610, Floresta**. El sitio está construido con HTML, CSS y JavaScript vanilla: sin frameworks, sin build step y listo para publicar en cualquier hosting estático.
 
 - **Repositorio:** [EntropyDevelopment/horana-cafe](https://github.com/EntropyDevelopment/horana-cafe)
-- **Sitio en vivo:** [entropydevelopment.github.io/horana-cafe](https://entropydevelopment.github.io/horana-cafe/)
+- **Sitio en vivo:** [horanacafe.com.ar](https://horanacafe.com.ar/)
 - **Diseño y desarrollo:** [Entropy](https://www.entropydevs.com)
 
 ---
@@ -42,7 +42,10 @@ horana-cafe/
 │   ├── main.js                 # CONFIG, interacciones y render de la galería
 │   └── prepare_assets.py       # Generación de assets derivados (herramienta interna)
 ├── assets/
-│   ├── galeria/                 # Fotos reales de la galería (vacío por ahora)
+│   ├── galeria/
+│   │   ├── delicias/            # Fotos de chipa, rolls, croissants, budín y cookie
+│   │   └── espacio/             # Fachada, salón y vistas nocturnas
+│   ├── historia-horana.jpg      # Foto del pergamino de la sección Nuestra casa
 │   ├── horana_logo_transparent.png
 │   ├── horana_emblem.png
 │   ├── horana_logo.jpg
@@ -53,6 +56,7 @@ horana-cafe/
 │   ├── menu_horana.jpg
 │   ├── certificado_barista.jpg
 │   └── entropy-logo.webp
+├── CNAME                       # horanacafe.com.ar
 ├── .gitattributes
 ├── .gitignore
 ├── .nojekyll
@@ -89,7 +93,8 @@ const CONFIG = {
     menuPdf: "assets/menu_horana.pdf",
     menuJpg: "assets/menu_horana.jpg",
     baristaCertificate: "assets/certificado_barista.jpg",
-    entropyLogo: "assets/entropy-logo.webp"
+    entropyLogo: "assets/entropy-logo.webp",
+    historyImage: "assets/historia-horana.jpg"
   }
 };
 ```
@@ -113,39 +118,41 @@ const CONFIG = {
 
 ---
 
-## 4. Galería editable
+## 4. Galería, fotos e historia
 
-La galería se genera desde el objeto `GALLERY` en `scripts/main.js`:
+La sección **04 — Galería** se llama **“Algunas de nuestras delicias”** y tiene dos colecciones: **Nuestras delicias** y **Nuestro espacio**. Todas las fotos se generan desde el objeto `GALLERY` en `scripts/main.js`:
 
 ```js
 const GALLERY = {
-  productos: [
+  delicias: [
     {
-      title: "Latte art",
-      icon: "g-latte",
-      src: null,
-      alt: "Taza de latte con arte de corazón"
+      title: "Chipa",
+      note: "Recién horneada, con el queso justo.",
+      icon: "g-bagel",
+      src: "assets/galeria/delicias/chipa.jpg",
+      alt: "Chipa recién horneada en HorAna",
+      width: 1200,
+      height: 1600
     }
   ],
   espacio: [/* ... */]
 };
 ```
 
-Para reemplazar una tarjeta por una foto real, alcanza con completar `src`:
+Para agregar o reemplazar una foto:
 
-```js
-{
-  title: "Latte art",
-  icon: "g-latte",
-  src: "assets/galeria/latte.jpg",
-  alt: "Latte con arte de corazón servido en la barra de HorAna"
-}
-```
+1. Copiar el archivo a `assets/galeria/delicias/` o `assets/galeria/espacio/`.
+2. Agregar o editar el objeto correspondiente en `GALLERY`.
+3. Completar `src`, `alt`, `width` y `height` con las dimensiones reales.
 
-- La imagen se renderiza con `loading="lazy"` y `decoding="async"`.
-- Si una imagen falla, la tarjeta vuelve automáticamente a la ilustración de línea y al estado “Próximamente”.
-- Las ilustraciones son SVG inline (`#g-latte`, `#g-croissant`, etc.) y no dependen de archivos externos.
-- Recomendado: fotos verticales u horizontales de al menos 1200 px de ancho, optimizadas en JPG/WebP por debajo de 250 KB.
+- Cada foto se abre en un lightbox con su título y descripción.
+- Se cargan con `loading="lazy"` y `decoding="async"`.
+- Si una imagen falla, la tarjeta vuelve a la ilustración de línea y muestra “Foto no disponible”.
+- Recomendado: fotos de al menos 1200 px de ancho, optimizadas en JPG/WebP.
+
+### La historia de Nuestra casa
+
+La sección **01 — Nuestra casa** incluye la foto del pergamino `assets/historia-horana.jpg` y el texto completo de la historia de Horacio y Ana dentro de una cita. Para cambiar el texto, editá `.about__story-text` en `index.html`. Para reemplazar la foto, cambiá `assets/historia-horana.jpg` manteniendo el mismo nombre.
 
 ---
 
@@ -227,11 +234,11 @@ Detalles de craft:
 
 ## 9. Publicación
 
-El sitio está publicado con **GitHub Pages**:
+El sitio está publicado en **GitHub Pages** con el dominio propio:
 
-**[https://entropydevelopment.github.io/horana-cafe/](https://entropydevelopment.github.io/horana-cafe/)**
+**[https://horanacafe.com.ar/](https://horanacafe.com.ar/)**
 
-La publicación está configurada desde la rama `main` / carpeta raíz (`/`). Cada push a `main` reconstruye el sitio automáticamente. El archivo `.nojekyll` evita el procesamiento de Jekyll.
+La publicación está configurada desde la rama `main` / carpeta raíz (`/`) y el archivo `CNAME` contiene `horanacafe.com.ar`. Cada push a `main` reconstruye el sitio automáticamente. El archivo `.nojekyll` evita el procesamiento de Jekyll.
 
 ### Reproducir la configuración
 
@@ -256,4 +263,4 @@ Diseño y desarrollo: **[Entropy](https://www.entropydevs.com) · www.entropydev
 
 Identidad, menú y contenidos: **HorAna — Café de Especialidad**.
 
-Los assets de marca, el menú y el certificado pertenecen a HorAna. Las ilustraciones SVG de la galería y el código del sitio fueron realizados para este proyecto.
+Los assets de marca, el menú, las fotografías de la galería y el certificado pertenecen a HorAna. Las ilustraciones SVG de respaldo y el código del sitio fueron realizados para este proyecto.
