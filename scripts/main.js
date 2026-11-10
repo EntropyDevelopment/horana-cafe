@@ -11,7 +11,7 @@ const CONFIG = {
   neighborhood: "Floresta",
   mapQuery: "Cervantes 610, Floresta, Ciudad Autónoma de Buenos Aires",
   googleMapsLink: "https://maps.app.goo.gl/cgvFmFHo3A5579jQA",
-  googleReviewsUrl: "#", // Pegar aquí el link directo de reseñas de Google Maps
+  googleReviewsUrl: "https://search.google.com/local/writereview?placeid=ChIJbZa0a27JvJURQb78NWHTsTk",
   instagramUrl: "https://www.instagram.com/horana.cafe/",
   developer: {
     name: "Entropy",

@@ -76,7 +76,7 @@ const CONFIG = {
   neighborhood: "Floresta",
   mapQuery: "Cervantes 610, Floresta, Ciudad Autónoma de Buenos Aires",
   googleMapsLink: "https://maps.app.goo.gl/cgvFmFHo3A5579jQA",
-  googleReviewsUrl: "#", // Pegar aquí el link directo de reseñas de Google Maps
+  googleReviewsUrl: "https://search.google.com/local/writereview?placeid=ChIJbZa0a27JvJURQb78NWHTsTk",
   instagramUrl: "https://www.instagram.com/horana.cafe/",
   developer: {
     name: "Entropy",
@@ -98,7 +98,7 @@ const CONFIG = {
 
 | Campo | Efecto |
 | --- | --- |
-| `googleReviewsUrl` | El CTA de reseñas abre el enlace directo de Google Maps. Mientras sea `"#"`, muestra un toast elegante. |
+| `googleReviewsUrl` | El CTA de reseñas abre directamente el formulario para dejar una reseña de HorAna en Google Maps. |
 | `instagramUrl` | El bloque de Instagram y el enlace del menú móvil abren el perfil **@horana.cafe**. Si se deja en `null`, muestran el toast preparado. |
 | `googleMapsLink` | Actualiza todos los CTA de ubicación con el enlace corto de Google Maps. El mapa embebido se construye con `mapQuery` para fijar una única ubicación en Cervantes 610, Floresta. |
 
@@ -241,7 +241,7 @@ La publicación está configurada desde la rama `main` / carpeta raíz (`/`) y e
 ### Antes de publicar
 
 - [ ] Reemplazar el certificado de referencia por la foto oficial.
-- [ ] Completar `googleReviewsUrl` con el enlace directo de reseñas.
+- [x] Google Reviews activo con enlace directo para dejar reseña.
 - [x] Instagram activo: [@horana.cafe](https://www.instagram.com/horana.cafe/).
 - [ ] Actualizar las URLs absolutas de Open Graph/Twitter si se define el dominio final.
 - [x] Mapa fijado en Cervantes 610, Floresta.
